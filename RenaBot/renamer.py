@@ -256,7 +256,7 @@ async def batchrenamer(event):
         except:
             download_ext=""
         if os.path.exists(f"Thumbs\\{event.peer_id.user_id}.png"):
-            await upload_with_progress_bar(client=C,edited=probar_edit,file_location=download, name=f"{file_name} {number}{filename_later}{download_ext}",thumbnail=f"Thumbs\\{event.peer_id.user_id}.png")
+            await upload_with_progress_bar(client=C,edited=probar_edit,file_location=download, name=f"{number}{filename_later}{file_name}{download_ext}",thumbnail=f"Thumbs\\{event.peer_id.user_id}.png")
         else:
             await upload_with_progress_bar(client=C,edited=probar_edit,file_location=download, name=f"{file_name} {number}{filename_later}{download_ext}")
         j=j+1
