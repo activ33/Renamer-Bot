@@ -198,10 +198,10 @@ async def batchrenamer(event):
     filename_later=""
     if '#zzz' in temp:
         number=temp.split("#zzz",1)
-        file_name=number[0]
+        file_name=number[1]
         file_name=file_name.strip()
         try:
-            number1=number[1]
+            number1=number[0]
             number=''
             for i in number1:
                 if i.isnumeric():
@@ -210,7 +210,7 @@ async def batchrenamer(event):
                     filename_later=filename_later+i
             print(number,filename_later)
             if len(number)==0:
-                await event.reply("Enter a number after zzz.")
+                await event.reply("Enter a number before zzz.")
                 usage=False
                 tasks.clear()
                 return
@@ -218,7 +218,7 @@ async def batchrenamer(event):
             print(number,filename_later)
         except Exception as E:
             print(E)
-            await event.reply("Enter a number after zzz not text.")
+            await event.reply("Enter a number before zzz not text.")
             usage= False
             tasks.clear()
             return
