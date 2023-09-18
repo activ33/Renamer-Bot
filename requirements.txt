@@ -1,4 +1,4 @@
-telethon~=1.22.0
+telethon==1.30.3
 cryptg
 aiohttp==3.8.2
 Flask==2.2.2
