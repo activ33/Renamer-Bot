@@ -1,4 +1,5 @@
 telethon~=1.22.0
+cryptg
 aiohttp==3.8.2
 Flask==2.2.2
 gunicorn==20.1.0
